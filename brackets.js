@@ -1,7 +1,10 @@
 /**
-    (replace this with your function comment which describes 
-    what your function does, what the arguments are, and what 
-    the output should be.)
+    The doubleBracket function takes a string as a parameter. What this function does is that it takes the indexes from the first pair 
+    of "[[" brackets and moves 2 places ahead so we can slice them out and it takes the index from the "]]" bracket. We first check
+    that there exits brackets and if not then we return null. We also check a special case("]]" before the "[[") and if that's the case,
+    we slice the "]]" brackets out and take new indexes for both brackets. Then we slice to get the word between the brackets. That's for 
+    the special case. Now for the generic case. We just slice to get the word between the brackets without the extra stuff.
+    In the end, we return a word that is the sliced word obtained from the test cases
 */
 function doubleBracket(s) {
     var new_word = "";
@@ -26,6 +29,7 @@ function doubleBracket(s) {
     }
 }
 
+//test cases
 var word = "xx[[abc]]xx";
 console.log(doubleBracket(word));
 var word2 = "xxx[[123]] [[]]";
